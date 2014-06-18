@@ -1,0 +1,17 @@
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+.container {
+    max-width: 740px;
+    margin: 2em auto;
+    text-align: justify;
+    outline: none;
+}
+
+h1.title {
+    text-align: center;
+    border-bottom: 2px dashed black;
+    padding-bottom: 20px;
+    font-size: 67px;
+}
