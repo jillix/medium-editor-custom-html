@@ -1,6 +1,9 @@
 # medium-editor-custom-html
 Insert custom HTML using a new button in the Medium Editor toolbar
 
+# Preview
+Check out the [demo page hosted on GitHub pages](http://jillix.github.io/medium-editor-custom-html/).
+
 # Documentation
 
 ## `new CustomHtml(options)`
