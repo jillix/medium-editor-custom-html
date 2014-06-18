@@ -1,4 +1,18 @@
-function CustomHtml(options) {
+/**
+ * CustomHtml
+ * Creates a new instance of CustomHtml extension.
+ *
+ * Licensed under the MIT license.
+ * Copyright (c) 2014 jillix
+ *
+ * @name CustomHtml
+ * @function
+ * @param {Object} options An object containing the extension configuration. The
+ * following fields should be provided:
+ *  - buttonText: the text of the button (default: `</>`)
+ *  - htmlToInsert: the HTML code that should be inserted
+ */
+function CustomHtml (options) {
     this.button = document.createElement('button');
     this.button.className = 'medium-editor-action';
     this.button.innerText = options.buttonText || "</>";
@@ -40,12 +54,27 @@ function CustomHtml(options) {
     }
 }
 
+/**
+ * onClick
+ * The click event handler that calls `insertHtmlAtCaret` method.
+ *
+ * @name onClick
+ * @function
+ */
 CustomHtml.prototype.onClick = function() {
     this.insertHtmlAtCaret(this.options.htmlToInsert);
 };
 
+/**
+ * getButton
+ * This function is called by the Medium Editor and returns the button that is
+ * added in the toolbar
+ *
+ * @name getButton
+ * @function
+ * @return {HTMLButtonElement} The button that is attached in the Medium Editor
+ * toolbar
+ */
 CustomHtml.prototype.getButton = function() {
     return this.button;
 };
-
-CustomHtml.prototype.checkState = function (node) {};
