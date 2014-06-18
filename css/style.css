@@ -1,5 +1,6 @@
 body {
     font-family: "Open Sans", sans-serif;
+    font-size: 20px;
 }
 
 .container {
@@ -11,8 +12,6 @@ body {
 
 h1.title {
     text-align: center;
-    border-bottom: 2px dashed black;
-    padding-bottom: 20px;
     font-size: 67px;
 }
 
@@ -20,4 +19,21 @@ blockquote {
     border-left: 7px solid #2980b9;
     padding: 16px;
     margin: 0;
+}
+
+a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+hr {
+    border: 2px dashed black;
+    border-style: none none dashed;
+    color: #fff;
+    background-color: #fff;
+}
+
+.copyright {
+    text-align: center;
 }
