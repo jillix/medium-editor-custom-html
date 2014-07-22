@@ -15,7 +15,11 @@
 function CustomHtml (options) {
     this.button = document.createElement('button');
     this.button.className = 'medium-editor-action';
-    this.button.innerText = options.buttonText || "</>";
+    if (this.button.innerText) {
+        this.button.innerText = options.buttonText || "</>";
+    } else {
+        this.button.textContent = options.buttonText || "</>";
+    }
     this.button.onclick = this.onClick.bind(this);
     this.options = options;
     this.insertHtmlAtCaret = function (html) {
