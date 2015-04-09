@@ -1,6 +1,6 @@
 {
   "name": "medium-editor-custom-html",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Insert custom HTML using a new button in the Medium Editor toolbar",
   "main": "src/custom-html.js",
   "directories": {
@@ -21,9 +21,7 @@
   ],
   "author": "jillix <contact@jillix.com>",
   "contributors": [
-    {
-      "name": "Ariel Rodriguez <arielsvn@gmail.com> (http://arielsvn.github.io)"
-    }
+    "Ariel Rodriguez <arielsvn@gmail.com> (http://arielsvn.github.io)"
   ],
   "license": "MIT",
   "bugs": {
