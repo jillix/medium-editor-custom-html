@@ -20,6 +20,11 @@
     "html"
   ],
   "author": "jillix <contact@jillix.com>",
+  "contributors": [
+    {
+      "name": "Ariel Rodriguez <arielsvn@gmail.com> (http://arielsvn.github.io)"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jillix/medium-editor-custom-html/issues"
