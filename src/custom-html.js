@@ -58,7 +58,7 @@
             // IE < 9
             document.selection.createRange().pasteHTML(html);
         }
-    }
+    };
 
     /**
      * onClick
