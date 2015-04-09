@@ -1,5 +1,31 @@
 (function () {
-    function insertHtmlAtCaret(html) {
+    /**
+     * CustomHtml
+     * Creates a new instance of CustomHtml extension.
+     *
+     * Licensed under the MIT license.
+     * Copyright (c) 2014 jillix
+     *
+     * @name CustomHtml
+     * @function
+     * @param {Object} options An object containing the extension configuration. The
+     * following fields should be provided:
+     *  - buttonText: the text of the button (default: `</>`)
+     *  - htmlToInsert: the HTML code that should be inserted
+     */
+    function CustomHtml(options) {
+        this.button = document.createElement('button');
+        this.button.className = 'medium-editor-action';
+        if (this.button.innerText) {
+            this.button.innerText = options.buttonText || "</>";
+        } else {
+            this.button.textContent = options.buttonText || "</>";
+        }
+        this.button.onclick = this.onClick.bind(this);
+        this.options = options;
+    }
+
+    CustomHtml.insertHtmlAtCaret = function(html) {
         var sel, range;
         if (window.getSelection) {
             // IE9 and non-IE
@@ -35,32 +61,6 @@
     }
 
     /**
-     * CustomHtml
-     * Creates a new instance of CustomHtml extension.
-     *
-     * Licensed under the MIT license.
-     * Copyright (c) 2014 jillix
-     *
-     * @name CustomHtml
-     * @function
-     * @param {Object} options An object containing the extension configuration. The
-     * following fields should be provided:
-     *  - buttonText: the text of the button (default: `</>`)
-     *  - htmlToInsert: the HTML code that should be inserted
-     */
-    function CustomHtml(options) {
-        this.button = document.createElement('button');
-        this.button.className = 'medium-editor-action';
-        if (this.button.innerText) {
-            this.button.innerText = options.buttonText || "</>";
-        } else {
-            this.button.textContent = options.buttonText || "</>";
-        }
-        this.button.onclick = this.onClick.bind(this);
-        this.options = options;
-    }
-
-    /**
      * onClick
      * The click event handler that calls `insertHtmlAtCaret` method.
      *
@@ -68,7 +68,7 @@
      * @function
      */
     CustomHtml.prototype.onClick = function () {
-        insertHtmlAtCaret(this.options.htmlToInsert);
+        CustomHtml.insertHtmlAtCaret(this.options.htmlToInsert);
     };
 
     /**
