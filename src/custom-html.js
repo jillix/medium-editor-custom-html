@@ -69,6 +69,9 @@
      */
     CustomHtml.prototype.onClick = function () {
         CustomHtml.insertHtmlAtCaret(this.options.htmlToInsert);
+        if (this.options.listener) {
+            this.options.listener.checkContentChanged();
+        }
     };
 
     /**
